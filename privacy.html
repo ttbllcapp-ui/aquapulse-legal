@@ -65,7 +65,7 @@
 <li>Context from your profile and today's progress, which the App adds automatically to each message so the coach can personalize its answer: weight, height, age, gender, daily water goal, how much you have had today and the percentage of your goal, the number of days in your streak, and your country.</li>
 <li>An identifier: your account ID if you are signed in, or otherwise a random guest ID created on your device.</li>
 </ul>
-<p><strong>Third-party AI processing.</strong> To generate a reply, our server sends your message and the context above to OpenAI's gpt-4o model through the Emergent AI integration service. These providers process the data to produce the reply. Your identifier may also be passed along as a session reference. Their handling of this data is governed by their own terms and privacy policies, including <a href="https://openai.com/policies/privacy-policy/">OpenAI's Privacy Policy</a>. Please do not include information in your messages that you do not want processed this way, such as other health conditions or contact details.</p>
+<p><strong>Third-party AI processing.</strong> To generate a reply, our server sends your message and the context above to a third-party AI model provider. Today this is Groq, Inc., running an open-weight Llama model. The provider processes the data only to produce the reply. Its handling of this data is governed by its own terms and privacy policy (<a href="https://groq.com/privacy-policy/">Groq Privacy Policy</a>). If we change the provider, we will update this policy. Please do not include information in your messages that you do not want processed this way, such as other health conditions or contact details.</p>
 <p><strong>Storage.</strong> Your messages and AquaCoach's replies are stored on our servers, linked to your account ID or guest ID, so the App can show your chat history. Your chat history is shown in the App only to the account or guest ID it belongs to. We also keep a daily count of messages per ID, and use your IP address briefly, to enforce usage limits and prevent abuse.</p>
 
 <h3>1.4 Data collected in Family Mode</h3>
@@ -78,7 +78,7 @@
 <h3>1.5 Subscriptions and RevenueCat</h3>
 <p>AquaPulse Pro purchases are made through Apple's App Store. We use RevenueCat, a third-party subscription management service, to process purchases and restores and to check whether you have an active AquaPulse Pro subscription. On iOS, the App connects to RevenueCat when it starts, even if you never buy anything, so it knows which features to unlock.</p>
 <ul>
-<li>RevenueCat receives an anonymous app user ID that its software creates on your device. In the current version of the App, this ID is not linked to your AquaPulse account, your name, or your email.</li>
+<li>RevenueCat receives an anonymous app user ID that its software creates on your device. From version 1.2, the App also sends this ID to our server with AquaCoach messages so the server can confirm an active AquaPulse Pro subscription. It is not linked to your name or email.</li>
 <li>RevenueCat receives purchase and subscription information from Apple, such as the plan you bought, transaction and renewal dates, trial status, and whether the subscription will renew.</li>
 <li>RevenueCat's software also collects technical information needed to provide its service, such as your device type and operating system version, app version, App Store country, and IP address.</li>
 <li>We do <strong>not</strong> send RevenueCat your hydration logs, profile details, or AquaCoach messages.</li>
@@ -111,7 +111,7 @@
 <ul>
 <li><strong>Apple:</strong> App Store payments for AquaPulse Pro, and Sign in with Apple if you choose to use it.</li>
 <li><strong>Google and Emergent:</strong> Google sign-in, if you choose to use it. Emergent's authentication service verifies the sign-in and passes your email, name and profile picture URL to our server.</li>
-<li><strong>OpenAI (via Emergent AI):</strong> to generate AquaCoach AI replies. Your message text, language setting and the profile context described in Section 1.3 are sent.</li>
+<li><strong>Groq, Inc. (AI model provider):</strong> to generate AquaCoach AI replies. Your message text, language setting and the profile context described in Section 1.3 are sent.</li>
 <li><strong>Render:</strong> hosts our backend server, which handles sign-in, AquaCoach and Family Mode requests.</li>
 <li><strong>MongoDB Atlas (cloud database):</strong> to store your account, AquaCoach chats, and family data.</li>
 <li><strong>RevenueCat:</strong> processes AquaPulse Pro purchases and subscription status on our behalf, as described in Section 1.5. See <a href="https://www.revenuecat.com/privacy/">RevenueCat's Privacy Policy</a>.</li>
@@ -134,7 +134,7 @@
 <ul>
 <li><strong>Access:</strong> request a copy of your data.</li>
 <li><strong>Correct:</strong> fix inaccurate data via Settings.</li>
-<li><strong>Delete:</strong> erase your account in-app (Settings → delete account), or by emailing us.</li>
+<li><strong>Delete:</strong> erase your account in-app (Settings → delete account). Without an account, use Settings → "Delete my data" to erase your AquaCoach chat history from our server and all data on your device. You can also email us.</li>
 <li><strong>Object / Restrict:</strong> limit certain processing by signing out, staying as a guest, or not using AquaCoach.</li>
 <li><strong>Portability:</strong> request your data in a machine-readable JSON format by email.</li>
 </ul>
