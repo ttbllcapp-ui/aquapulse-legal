@@ -3,7 +3,7 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
-<title>Privacy Policy — AquaPulse</title>
+<title>Privacy Policy · AquaPulse</title>
 <style>
   :root { color-scheme: dark; }
   body { background:#0a0e1a; color:#e8eef7; font:16px/1.6 -apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif; margin:0; padding:24px; }
@@ -20,17 +20,18 @@
 <body>
 <div class="wrap">
 
-<h1>Privacy Policy — AquaPulse</h1>
-<p class="meta">Effective Date: 1 June 2025 · Last Updated: 1 June 2025</p>
+<h1>Privacy Policy · AquaPulse</h1>
+<p class="meta">Effective Date: June 1, 2025 · Last Updated: October 18, 2026</p>
 
-<p>TTB International LLC ("we", "us", "our") respects your privacy. This Privacy Policy describes how the <strong>AquaPulse — Water Tracker</strong> mobile application ("AquaPulse", the "App") collects, uses, stores, and protects your information.</p>
+<p>TTB International LLC ("we", "us", "our") respects your privacy. This Privacy Policy describes how the <strong>AquaPulse: Water Tracker</strong> mobile application ("AquaPulse", the "App") collects, uses, stores, and protects your information.</p>
 
 <div class="box">
 <strong>📌 At a glance</strong>
 <ul>
-<li>AquaPulse is fully free, no ads, no in-app purchases.</li>
-<li>You can use the app entirely as a guest, with NO account and NO personal data sent to our servers.</li>
-<li>If you sign in with Apple, Google, or use Family Mode, we collect the minimum data needed to run those features.</li>
+<li>Core features are free with no ads. AquaPulse Pro is an optional subscription for additional features; purchases are handled by Apple and RevenueCat.</li>
+<li>You can use the app as a guest, with no account. Your water logs and profile are stored on your device.</li>
+<li>Some features send data off your device: AquaCoach AI sends your messages and some profile data to our server and to a third-party AI provider (Section 1.3), and the App checks your subscription status with RevenueCat (Section 1.5).</li>
+<li>If you sign in with Apple or Google, or use Family Mode, we collect the minimum data needed to run those features.</li>
 <li>You can permanently delete your account and all data at any time from inside the app (Settings → "Permanently delete my account").</li>
 </ul>
 </div>
@@ -44,33 +45,48 @@
 <li>App preferences: language, theme, reminder schedule, sound toggle.</li>
 <li>Local hydration streaks and achievements.</li>
 </ul>
-<p>This data is stored on your device via AsyncStorage. We do <strong>not</strong> see it unless you explicitly choose to sign in or use Family Mode.</p>
+<p>This data is stored on your device via AsyncStorage. We do <strong>not</strong> see it, except for the parts that are sent when you use AquaCoach (Section 1.3) or Family Mode (Section 1.4).</p>
 
 <h3>1.2 Data collected when you sign in (optional)</h3>
-<p>If you sign in with Apple Sign In or Google Sign In, we receive from those providers and store on our servers:</p>
+<p>Where the App offers sign-in and you choose to sign in with Apple Sign In or Google Sign In, we receive from those providers and store on our servers:</p>
 <ul>
 <li>A unique user ID (Sub claim)</li>
 <li>Your email address</li>
 <li>Your display name (if you choose to share it)</li>
 <li>Your profile picture URL (if available)</li>
 </ul>
+<p>If Apple does not share your email address with us, we create a placeholder identifier instead. Google sign-in is verified through an authentication service provided by Emergent, which passes your Google account email, name and profile picture URL to our server. We also store a sign-in session token so you stay signed in.</p>
 
 <h3>1.3 Data collected when you use AquaCoach AI</h3>
+<p>AquaCoach is an AI hydration coach included in AquaPulse Pro. When you send a message to AquaCoach, the App sends the following to our server:</p>
 <ul>
-<li>The text of your messages to the AI coach.</li>
-<li>Optional context you opt-in to share: today's hydration percentage, daily goal, weight, age, gender — purely to give you better answers.</li>
-<li>Your AquaCoach chat history is stored on our servers and visible only to you.</li>
+<li>The text of your message.</li>
+<li>Your app language setting.</li>
+<li>Context from your profile and today's progress, which the App adds automatically to each message so the coach can personalize its answer: weight, height, age, gender, daily water goal, how much you have had today and the percentage of your goal, the number of days in your streak, and your country.</li>
+<li>An identifier: your account ID if you are signed in, or otherwise a random guest ID created on your device.</li>
 </ul>
-<p>Messages are processed by OpenAI (gpt-4o) via the Emergent AI Universal API. OpenAI does <strong>not</strong> train on your data per their API policy. <a href="https://openai.com/policies/api-data-usage-policies">More info</a>.</p>
+<p><strong>Third-party AI processing.</strong> To generate a reply, our server sends your message and the context above to a third-party AI model provider. Today this is Groq, Inc., running an open-weight Llama model. The provider processes the data only to produce the reply. Its handling of this data is governed by its own terms and privacy policy (<a href="https://groq.com/privacy-policy/">Groq Privacy Policy</a>). If we change the provider, we will update this policy. Please do not include information in your messages that you do not want processed this way, such as other health conditions or contact details.</p>
+<p><strong>Storage.</strong> Your messages and AquaCoach's replies are stored on our servers, linked to your account ID or guest ID, so the App can show your chat history. Your chat history is shown in the App only to the account or guest ID it belongs to. We also keep a daily count of messages per ID, and use your IP address briefly, to enforce usage limits and prevent abuse.</p>
 
 <h3>1.4 Data collected in Family Mode</h3>
 <ul>
-<li>Your daily hydration percentage and goal, shared only with members of your family group.</li>
-<li>Your name and profile picture, shown on the family leaderboard.</li>
+<li>Your daily water goal, today's intake, your percentage of the goal, and your streak length, shared only with members of your family group.</li>
+<li>Your name (or your email address if no name is available) and profile picture, shown on the family leaderboard.</li>
 <li>The family group invite code you created or joined.</li>
 </ul>
 
-<h3>1.5 Data we do NOT collect</h3>
+<h3>1.5 Subscriptions and RevenueCat</h3>
+<p>AquaPulse Pro purchases are made through Apple's App Store. We use RevenueCat, a third-party subscription management service, to process purchases and restores and to check whether you have an active AquaPulse Pro subscription. On iOS, the App connects to RevenueCat when it starts, even if you never buy anything, so it knows which features to unlock.</p>
+<ul>
+<li>RevenueCat receives an anonymous app user ID that its software creates on your device. From version 1.2, the App also sends this ID to our server with AquaCoach messages so the server can confirm an active AquaPulse Pro subscription. It is not linked to your name or email.</li>
+<li>RevenueCat receives purchase and subscription information from Apple, such as the plan you bought, transaction and renewal dates, trial status, and whether the subscription will renew.</li>
+<li>RevenueCat's software also collects technical information needed to provide its service, such as your device type and operating system version, app version, App Store country, and IP address.</li>
+<li>We do <strong>not</strong> send RevenueCat your hydration logs, profile details, or AquaCoach messages.</li>
+<li>Apple handles payment. We and RevenueCat never receive your payment card details.</li>
+</ul>
+<p>See <a href="https://www.revenuecat.com/privacy/">RevenueCat's Privacy Policy</a> for how RevenueCat handles this data.</p>
+
+<h3>1.6 Data we do NOT collect</h3>
 <ul>
 <li>No advertising IDs (IDFA / GAID).</li>
 <li>No location data.</li>
@@ -82,7 +98,8 @@
 <h2>2. How We Use Your Information</h2>
 <ul>
 <li>To provide the core hydration tracking experience.</li>
-<li>To synchronize your account across devices if you sign in.</li>
+<li>To keep your account, family membership and AquaCoach history available when you sign in.</li>
+<li>To process AquaPulse Pro purchases and unlock Pro features for active subscribers.</li>
 <li>To deliver personalized AquaCoach AI responses.</li>
 <li>To enable the optional Family Mode leaderboard.</li>
 <li>To detect abuse and ensure service security.</li>
@@ -92,9 +109,12 @@
 <h2>3. Data Sharing</h2>
 <p>We share the minimum necessary data with the following service providers, who act on our behalf as data processors:</p>
 <ul>
-<li><strong>Apple Sign In / Google Sign In</strong> — for authentication (you choose to use them).</li>
-<li><strong>OpenAI (via Emergent AI)</strong> — to generate AquaCoach AI replies. Your message text and optional context are sent. No long-term training.</li>
-<li><strong>MongoDB Atlas (cloud database)</strong> — to store your account, chats, family data.</li>
+<li><strong>Apple:</strong> App Store payments for AquaPulse Pro, and Sign in with Apple if you choose to use it.</li>
+<li><strong>Google and Emergent:</strong> Google sign-in, if you choose to use it. Emergent's authentication service verifies the sign-in and passes your email, name and profile picture URL to our server.</li>
+<li><strong>Groq, Inc. (AI model provider):</strong> to generate AquaCoach AI replies. Your message text, language setting and the profile context described in Section 1.3 are sent.</li>
+<li><strong>Render:</strong> hosts our backend server, which handles sign-in, AquaCoach and Family Mode requests.</li>
+<li><strong>MongoDB Atlas (cloud database):</strong> to store your account, AquaCoach chats, and family data.</li>
+<li><strong>RevenueCat:</strong> processes AquaPulse Pro purchases and subscription status on our behalf, as described in Section 1.5. See <a href="https://www.revenuecat.com/privacy/">RevenueCat's Privacy Policy</a>.</li>
 </ul>
 <p>We do not share your data with advertisers, data brokers, or for marketing purposes.</p>
 
@@ -105,17 +125,18 @@
 <ul>
 <li>Guest local data: stays on your device until you uninstall or reset the app.</li>
 <li>Account data: retained while your account is active. Deleted permanently within 7 days when you press "Permanently delete my account".</li>
-<li>AquaCoach chat history: deletable anytime by tapping the trash icon in the AI Coach tab.</li>
+<li>AquaCoach chat history: kept until you delete it. You can delete it anytime by tapping the trash icon in the AI Coach tab. Changing the app language also clears it. Deleting your account deletes the chat history linked to your account; chat history from before you signed in is linked to your guest ID, so delete it with the trash icon.</li>
+<li>Subscription records: Apple and RevenueCat keep purchase records under their own policies. Deleting your AquaPulse account does not cancel your subscription or delete these records. To ask us to delete your RevenueCat data, email us.</li>
 </ul>
 
 <h2>6. Your Rights (GDPR, CCPA, KVKK)</h2>
 <p>You have the right to:</p>
 <ul>
-<li><strong>Access</strong> — request a copy of your data.</li>
-<li><strong>Correct</strong> — fix inaccurate data via Settings.</li>
-<li><strong>Delete</strong> — erase your account in-app (Settings → delete account), or by emailing us.</li>
-<li><strong>Object / Restrict</strong> — limit certain processing by signing out or staying as a guest.</li>
-<li><strong>Portability</strong> — request your data in a machine-readable JSON format by email.</li>
+<li><strong>Access:</strong> request a copy of your data.</li>
+<li><strong>Correct:</strong> fix inaccurate data via Settings.</li>
+<li><strong>Delete:</strong> erase your account in-app (Settings → delete account). Without an account, use Settings → "Delete my data" to erase your AquaCoach chat history from our server and all data on your device. You can also email us.</li>
+<li><strong>Object / Restrict:</strong> limit certain processing by signing out, staying as a guest, or not using AquaCoach.</li>
+<li><strong>Portability:</strong> request your data in a machine-readable JSON format by email.</li>
 </ul>
 <p>To exercise any right, email <a href="mailto:info@ttbinternationalllc.com">info@ttbinternationalllc.com</a>. We respond within 30 days.</p>
 
@@ -134,7 +155,7 @@ TTB International LLC<br>
 Email: <a href="mailto:info@ttbinternationalllc.com">info@ttbinternationalllc.com</a>
 </p>
 
-<footer>© 2025 TTB International LLC — AquaPulse · <a href="./terms.html">Terms</a> · <a href="./support.html">Support</a></footer>
+<footer>© 2025 TTB International LLC · AquaPulse · <a href="./terms.html">Terms</a> · <a href="./support.html">Support</a></footer>
 </div>
 </body>
 </html>
